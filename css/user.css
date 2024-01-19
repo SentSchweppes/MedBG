@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: white;
+  background-color: #333;
+}
+
+/* header */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+#logo {
+  display: flex;
+  justify-content: left;
+  height: 100px;
+  width: 200px;
+}
+
+header {
+  margin-top: 10px;
+  height: auto;
+  width: auto;
+  border: 1px solid green;
+}
+
+#searchbar {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+#user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid;
+  padding: 10px;
+}
+
+#userinfo {
+  display: flex;
+  flex-direction: column;
+}
+
+/* NavBar */
+.container {
+  margin-top: 40px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000; /* Adjust the z-index as needed */
+}
+
+.sidenav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.sidenav li {
+  margin-right: 20px;
+}
+
+.sidenav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.toggle-button {
+  display: none;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Main */
+main {
+  width: 70%;
+  /* height: auto; FIX */
+  background-color: lightgray;
+  border: #555 solid 1px;
+}
+
+@media screen and (max-width: 675px) {
+  .container {
+    margin-top: 60px;
+  }
+
+  .sidenav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .sidenav.show {
+    display: flex;
+  }
+
+  .sidenav a {
+    padding: 15px;
+    display: block;
+    border-bottom: 1px solid white;
+  }
+
+  .toggle-button {
+    display: block;
+  }
+  #user {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  #searchbar {
+    text-align: center;
+  }
+
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #logo {
+    display: none;
+  }
+}

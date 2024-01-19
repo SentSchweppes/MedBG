@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="/css/user.css" />
+    <script
+      src="https://kit.fontawesome.com/333b32af95.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <ul class="sidenav">
+        <li><a class="active" href="#home">Overview</a></li>
+        <li><a href="#news">Posts</a></li>
+        <li><a href="#contact">Comments</a></li>
+        <li><a href="#about">Liked</a></li>
+        <li><a href="#workplace">Workplace</a></li>
+        <li><a href="#explore">Explore</a></li>
+      </ul>
+      <button class="toggle-button" onclick="toggleMenu()">☰</button>
+    </div>
+    <div class="container"></div>
+    <header>
+      <div id="logo">
+        <img src="/aimages/logo.png" alt="Logo" />
+      </div>
+      <div id="searchbar">
+        <h2>Hi, User!</h2>
+        <input
+          type="text"
+          size="26"
+          placeholder="Search the posts for what you want!"
+        />
+      </div>
+      <div id="user">
+        <!-- <div id="icons">
+          <button><i class="fa-regular fa-bell"></i></button>
+        </div> -->
+        <div id="userinfo">
+          <p>
+            First Name <br />
+            Last Name
+          </p>
+        </div>
+        <div id="pfp">
+          <img src="https://picsum.photos/50" alt="" />
+        </div>
+      </div>
+    </header>
+    <main></main>
+    <footer>
+      <p>Fooooooot</p>
+    </footer>
+    <script>
+      function toggleMenu() {
+        var sidenav = document.querySelector(".sidenav");
+        sidenav.classList.toggle("show");
+      }
+    </script>
+  </body>
+</html>
